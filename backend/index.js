@@ -13,7 +13,7 @@ const allowedOrigins = process.env.NODE_ENV === 'production'
 app.use(cors({ origin: allowedOrigins, credentials: true }))
 app.use(express.json())
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 
 // In-memory message store (simple).
 // Each message: { user, text, time }
