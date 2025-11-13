@@ -7,7 +7,12 @@ const app = express()
 
 // CORS configuration for production
 const allowedOrigins = process.env.NODE_ENV === 'production' 
-  ? ['https://momo-chat.vercel.app', 'https://your-frontend-url.vercel.app']
+  ? [
+      'https://momo-chat.netlify.app',
+      'https://momo-chat.vercel.app',
+      'https://your-frontend-url.vercel.app',
+      'https://your-frontend-url.netlify.app'
+    ]
   : ['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173']
 
 app.use(cors({ origin: allowedOrigins, credentials: true }))
